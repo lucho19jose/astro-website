@@ -7,6 +7,9 @@ import { getEntryBySlug } from "astro:content";
 
 const homepage = await getEntryBySlug("homepage", "index");
 const { banner, feature, services, workflow, call_to_action } = homepage.data;
+
+console.log(homepage.data.banner);
+
 ---
 
 <Base>
@@ -120,7 +123,6 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
                 )}
               </div>
 
-              {/* Content */}
               <div
                 class={`service-content mt-5 md:mt-0 ${!isOdd && "md:order-1"}`}
               >
